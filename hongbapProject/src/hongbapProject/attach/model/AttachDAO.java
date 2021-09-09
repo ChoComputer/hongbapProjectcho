@@ -247,4 +247,35 @@ public class AttachDAO {
 		return resultCode;
 	} // attachDelete 끝
 	
+	public int attachDeleteAll (int resId) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		String sql = "DELETE FROM resAttach WHERE resId=?";
+		
+		int resultCode = 0;
+		try {
+			con = ds.getConnection();
+			pstmt =con.prepareStatement(sql);
+			pstmt.setInt(1, resId);
+			pstmt.executeUpdate();
+			resultCode =1;
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+			
+		}finally {
+			try {
+				if(con!=null&&!con.isClosed()) {
+					con.close();
+				}
+				if(pstmt!=null&&!pstmt.isClosed()) {
+					pstmt.close();
+				}
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return resultCode;
+	} // attachDeleteAll 끝
 }

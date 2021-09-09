@@ -35,12 +35,13 @@ public class ResInfoService implements IResService {
 			menu = mdao.getMenu(resId);
 			resResult = dao.getResInfo(resId);
 			
-			
+			System.out.println("menu 정보 : "+ menu);
 			request.setAttribute("resResult", resResult);
 			request.setAttribute("menu", menu);
 			
 			// resId 세션 발급(후에 이것으로 레스토랑 삭제, 레스토랑 수정, 메뉴 조회 가능)
 			session.setAttribute("resId", resId);
+			System.out.println("resId 세션 값 : "+ resId);
 			
 			
 		} catch (Exception e) {

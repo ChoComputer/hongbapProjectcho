@@ -31,13 +31,13 @@ private DataSource ds;
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		String sql ="INSERT INTO resMenu (id, menuName, menuBook, menuPrice) VALUES"
+		String sql ="INSERT INTO resMenu (resId, menuName, menuBook, menuPrice) VALUES"
 				+ "(?, ?, ?, ?)";
 		
 		try {
 		con = ds.getConnection();
 		pstmt = con.prepareStatement(sql);
-		pstmt.setInt(1, menu.getBid());
+		pstmt.setInt(1, menu.getResId());
 		pstmt.setString(2, menu.getMenuName());
 		pstmt.setString(3, menu.getMenuBook());
 		pstmt.setString(4, menu.getMenuPrice());
@@ -70,7 +70,7 @@ private DataSource ds;
 		ResultSet rs = null;
 		
 		MenuVO menu = new MenuVO();
-		String sql = "SELECT * FROM resMenu WHERE id=?";
+		String sql = "SELECT * FROM resMenu WHERE resId=?";
 		
 		try {
 			con=ds.getConnection();

@@ -108,8 +108,8 @@
 		</div>
 		
 
-    <c:if test = "${id_session eq 'abc'}">
-	<a href="http://localhost:8181/hongbapProject/board/boardSelect.do?page=1"><button 
+    <c:if test = "${id_session eq 'shinwr7'}">
+	<a href="http://localhost:8181/hongbapProject/res/requsetRes.jsp"><button 
 	                type="button" class="btn btn-primary">관리자용 식당추가</button></a>
 	</c:if>
 

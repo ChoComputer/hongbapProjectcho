@@ -5,13 +5,19 @@ public class MenuVO {
 	private String menuName;
 	private String menuBook;
 	private String menuPrice;
+	private int resId;
 	
 	
-	
+	public int getResId() {
+		return resId;
+	}
+	public void setResId(int resId) {
+		this.resId = resId;
+	}
 	@Override
 	public String toString() {
 		return "MenuVO [bid=" + bid + ", menuName=" + menuName + ", menuBook=" + menuBook + ", menuPrice=" + menuPrice
-				+ "]";
+				+ ", resId=" + resId + "]";
 	}
 	public int getBid() {
 		return bid;

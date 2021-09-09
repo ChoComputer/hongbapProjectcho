@@ -2,6 +2,7 @@ package hongbapProject.attach.service;
 
 import java.io.UnsupportedEncodingException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -26,6 +27,18 @@ public class AttachWriteService implements IAttachService{
 		}
 		// 댓글 글쓴이가 현재 로그인되어 있는 유저로 표기하기 위해 로그인된 세션을 불러온다. 
 		String nick = (String)session.getAttribute("nick_session");
+		// 로그인 세션 검사
+		if(nick==null) {
+				try {
+					
+					String ui = "/user/userLogin.jsp";
+					RequestDispatcher dp = request.getRequestDispatcher(ui);
+					dp.forward(request, response);
+				} catch(Exception e) {
+					e.printStackTrace();
+				}
+			}
+		
 		
 		Integer iResId = (Integer)session.getAttribute("resId");
 		
@@ -34,7 +47,8 @@ public class AttachWriteService implements IAttachService{
 		if(iResId==null) {
 			System.out.println("레스토랑ID 세션 받기 실패");
 		}
-		int resId = Integer.valueOf(iResId).intValue();
+		int resId = iResId.intValue();
+		System.out.println("댓글쓰기 resId 값 : " + resId);
 		
 		String awriter = nick;
 		String acheck =  nick+"("+resId+")";

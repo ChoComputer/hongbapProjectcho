@@ -29,7 +29,7 @@ h1 {font:italic small-caps bold 60px/1 sans-serif; line-height: 60px;}
 
 <div class="container">
 
-    <form action="가게추가.do" method="post">
+    <form action="http://localhost:8181/hongbapProject/res/menuInsert.do?resId=${resId}" method="post">
 		
          				<div class="row">&nbsp;</div>
 
@@ -49,7 +49,7 @@ h1 {font:italic small-caps bold 60px/1 sans-serif; line-height: 60px;}
                     <div class="input-group-prepend">
                           <span class="input-group-text ">메뉴이름</span>
                       </div>
-                      <input type="text" class="form-control" name="menuName" placeholder="메뉴이름">
+                      <input type="text" class="form-control" name="menuName" placeholder="메뉴이름" required>
                 </div>
                 </div>
                 
@@ -60,7 +60,7 @@ h1 {font:italic small-caps bold 60px/1 sans-serif; line-height: 60px;}
                     <div class="input-group-prepend">
                           <span class="input-group-text ">메뉴설명</span>
                       </div>
-                      <input type="text" class="form-control" name="menuPrice" placeholder="메뉴설명">
+                      <input type="text" class="form-control" name="menuBook" placeholder="메뉴설명" required>
                 </div>
                 </div>
                 
@@ -71,7 +71,7 @@ h1 {font:italic small-caps bold 60px/1 sans-serif; line-height: 60px;}
                     <div class="input-group-prepend">
                           <span class="input-group-text ">메뉴가격</span>
                       </div>
-                      <input type="text" class="form-control" name="menuPrice" placeholder="메뉴가격">
+                      <input type="text" class="form-control" name="menuPrice" placeholder="메뉴가격" required>
                 </div>
                 </div>
                 

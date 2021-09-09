@@ -1,4 +1,4 @@
-package hongbapProject.attach.service;
+package hongbapProject.menu.service;
 
 import java.io.UnsupportedEncodingException;
 
@@ -6,16 +6,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import hongbapProject.attach.model.AttachDAO;
+import hongbapProject.menu.model.MenuDAO;
 
-public class AttachDeleteService implements IAttachService{
+public class MenuDeleteService implements IMenuService{
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 	
-		HttpSession session = null;
-		session = request.getSession();
-		
 		try {
 			request.setCharacterEncoding("utf-8");
 			response.setCharacterEncoding("utf-8");
@@ -23,24 +20,28 @@ public class AttachDeleteService implements IAttachService{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		HttpSession session = null;
+		session = request.getSession();
 		
-		String nick = (String)session.getAttribute("nick_session");
+		String strResId =(String)request.getAttribute("resId");
 		
+		if(strResId!=null) {
+			int resId = Integer.parseInt(strResId);
 			
-		AttachDAO dao = AttachDAO.getInstance();
-		 int resultCode = dao.attachDelete(nick);
-		
-		if(resultCode == 1) {
-			System.out.println("attachDelete 서비스 실행 완료");
+			MenuDAO mdao =MenuDAO.getInstance();
 			
-		} else {
-			System.out.println("attachDelete 서비스 실행 실패");
+			mdao.menuDelete(resId);
+			
+			System.out.println("메뉴 삭제 성공");
+			
+		}else {
+			System.out.println("메뉴 삭제 실패");
 		}
-			
 		
 		
 		
 		
-		
+	
 	}
+
 }

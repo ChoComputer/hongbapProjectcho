@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,11 +63,15 @@
     <footer>
       <div class="button">
         <button onclick="history.back()" class="btn btn-danger buttonReq" >뒤로가기</button>
-		<a href="http://localhost:8181/hongbapProject/board/boardDelete.do?bId=${board.bId}"><button
-                type="button" class="btn btn-dark">삭제하기</button></a>
-        <a href="http://localhost:8181/hongbapProject/boardUpdate.do?bId=${board.bId}"><button type="button" class="btn btn-success buttonReset" >수정하기</button></a>
-		<a href="http://localhost:8181/hongbapProject/board/boardSelect.do?page=1"><button
-                type="button" class="btn btn-primary">요청게시판</button></a>
+		
+		<c:if test="${nick_session eq board.bWriter}">
+			<a href="http://localhost:8181/hongbapProject/board/boardDelete.do?bId=${board.bId}"><button
+	                type="button" class="btn btn-dark">삭제하기</button></a>
+	        <a href="http://localhost:8181/hongbapProject/boardUpdate.do?bId=${board.bId}"><button type="button" class="btn btn-success buttonReset" >수정하기</button></a>
+			<a href="http://localhost:8181/hongbapProject/board/boardSelect.do?page=1"><button
+	                type="button" class="btn btn-primary">요청게시판</button></a>
+        </c:if>
+                
         <a href="http://localhost:8181/hongbapProject/hongbapMain/hongbapMain.jsp"><button type="button" class="btn btn-warning buttonMain" >메인화면으로 가기</button></a>
 
       </div>

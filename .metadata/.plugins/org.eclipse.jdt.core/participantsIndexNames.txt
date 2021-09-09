@@ -1,3 +1,17 @@
 INDEX VERSION 1.131
+<<<<<<< HEAD
+C:\eclipse\workspace2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1698580056.index
+\hongbapProject\src
+C:\eclipse\workspace2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2419608241.index
+\hongbapProject\src
+C:\eclipse\workspace2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3945659125.index
+=======
+C:\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3945659125.index
+\hongbapProject\src
+C:\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1698580056.index
+\hongbapProject\src
 C:\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1867461889.index
+\hongbapProject\src
+C:\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2419608241.index
+>>>>>>> 03916ebc9d00f6704d54090de56bfcd692f8dcd3
 \hongbapProject\src

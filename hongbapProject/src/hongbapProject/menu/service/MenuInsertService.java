@@ -28,13 +28,14 @@ public class MenuInsertService implements IMenuService{
 		String menuBook=request.getParameter("menuBook");
 		String menuPrice= request.getParameter("menuPrice");
 		
-		String strResId = (String)session.getAttribute("resId");
+		String strResId = (String)request.getParameter("resId");
 		int resId = Integer.parseInt(strResId);
+		System.out.println("메뉴입력 위한 resId 값 : "+ resId);
 
 		MenuDAO dao = MenuDAO.getInstance();
 		
 		MenuVO menu = new MenuVO();
-		menu.setBid(resId);
+		menu.setResId(resId);
 		menu.setMenuName(menuName);
 		menu.setMenuBook(menuBook);
 		menu.setMenuPrice(menuPrice);

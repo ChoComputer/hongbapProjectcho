@@ -1,9 +1,17 @@
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=182d89f3aac770dc8ec06d3198a0088d5a9560ea
+>>>>>>>=master
 PROBLEMS_FILTERS_MIGRATE=true
 SAVE_ALL_BEFORE_BUILD=true
 eclipse.preferences.version=1
+<<<<<<< HEAD
 platformState=1625060139398
+=======
+<<<<<<< HEAD
+platformState=1623723353010
+=======
+platformState=1623723068838
+>>>>>>> 03916ebc9d00f6704d54090de56bfcd692f8dcd3
+>>>>>>> 0594c48be36fe2153f16e2ae37942cba6fc5a1ea
 quickStart=false
 tipsAndTricks=true

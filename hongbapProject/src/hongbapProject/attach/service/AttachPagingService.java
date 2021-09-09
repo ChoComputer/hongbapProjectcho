@@ -3,6 +3,7 @@ package hongbapProject.attach.service;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -70,10 +71,31 @@ public class AttachPagingService implements IAttachService{
 					ResDAO rDao = ResDAO.getInstance();
 					MenuDAO mDao = MenuDAO.getInstance();
 					// 레스토랑  DB 삭제 위해 참조키 설정 되어있는 메뉴 DB 우선적으로 삭제
-					mDao.menuDelete(resId);
+					AttachDAO aDao = AttachDAO.getInstance();
+					int attachDelete =aDao.attachDeleteAll(resId);
+					if(attachDelete==1) {
+						System.out.println("해당 식당의 전체 댓글 삭제 완료");
+					}
+					int menuDelete = mDao.menuDelete(resId);
+					if(menuDelete ==1) {
+						System.out.println("해당 식당의 메뉴 정보 삭제 완료");
+					}
 					// 그 후 레스토랑 DB 삭제
-					rDao.resDelete(resId);
+					int resDelete = rDao.resDelete(resId);
+					if(resDelete == 1) {
+						System.out.println("해당 식당 정보 삭제 완료");
+					}
 					
+					if(attachDelete==1&&menuDelete==1&&resDelete==1) {
+						try {
+							
+							String ui = "/hongbapMain/hongbapMain.jsp";
+							RequestDispatcher dp = request.getRequestDispatcher(ui);
+							dp.forward(request, response);
+						} catch(Exception e) {
+							e.printStackTrace();
+						}
+					}
 					System.out.println("댓글, 평점 갯수가 20개 이상이면서 별점이 평균 이하이므로 DB에서 삭제합니다.");
 					
 					

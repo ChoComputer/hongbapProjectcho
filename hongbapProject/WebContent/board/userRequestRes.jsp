@@ -24,13 +24,13 @@
 <body style="background-image:url(../img/cloud.png); background-repeat: cover;">
 	<div class="container">
 	
-  <form action="/hongbapProject/boardUpdateOk.do" method="post">
+  <form action="/hongbapProject/boardWrite.do" method="post">
   
   <!-- hidden 태그를 이용해 나머지 요소들도 다 첨부해 주세요 -->
   <input type="hidden" value="${board.bId }"name="bId">
   <input type="hidden" value="${board.bHit }"name="bHit">
   <input type="hidden" value="${board.bDate }"name="bDate">
-  <input type="hidden" value="${board.bWriter }"name="bWriter">
+  <input type="hidden" value="${nick_session }"name="bWriter">
   <div class="row">&nbsp;</div>
   <header>
     <div class="titleBack">

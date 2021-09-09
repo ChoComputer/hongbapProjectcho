@@ -64,7 +64,7 @@ h1 {font:italic small-caps bold 60px/1 sans-serif; line-height: 60px;}
                     <div class="input-group-prepend">
                           <span class="input-group-text ">가게이름</span>
                       </div>
-                    <input type="text" class="form-control" name="resName" >
+                    <input type="text" class="form-control" name="resName" required >
                 </div>
                 </div>
                 
@@ -75,7 +75,7 @@ h1 {font:italic small-caps bold 60px/1 sans-serif; line-height: 60px;}
                     <div class="input-group-prepend">
                           <span class="input-group-text  ">가게주소</span>
                       </div>
-                    <input type="text" class="form-control" name="resAddr" placeholder="00시00구00동">
+                    <input type="text" class="form-control" name="resAddr" placeholder="00시00구00동" required>
                 </div>
                 </div>
                 
@@ -86,7 +86,7 @@ h1 {font:italic small-caps bold 60px/1 sans-serif; line-height: 60px;}
                     <div class="input-group-prepend">
                           <span class="input-group-text  ">전화번호</span>
                       </div>
-                    <input type="tel" class="form-control" name="resPnum" placeholder="000-0000-0000">
+                    <input type="tel" class="form-control" name="resPnum" placeholder="000-0000-0000" required>
                 </div>
                 </div>
                 

@@ -78,7 +78,7 @@ h1 {top: 6px; left:0; font:italic small-caps bold 60px/1 sans-serif; line-height
 <div class="input-group-prepend">
 <span class="input-group-text A">&nbsp;닉네임&nbsp;&nbsp;</span>
 </div>
-<input type = "text" class="form-control" name="UserNick" placeholder ="NinkName" required>
+<input type = "text" class="form-control" name="UserNick" placeholder ="NickName" required>
 </div>
 </div>
 

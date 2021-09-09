@@ -51,17 +51,20 @@
                 <button type="submit" class="but" >제출</button>
                 <button type="reset" class="res" >초기화</button>
             </div>
+            <a href="/hongbapProject/boardWrite.do">요청게시판으로 이동</a>
+		<a	href="http://localhost:8181/hongbapProject/hongbapMain/hongbapMain.jsp">메인게시판으로 이동</a>
             <div class="row">
                 <div class="pas" style="height: 14px;"> DELETE FROM 게시판 </div>
             </div>
 
             </form>
             <div class="row">&nbsp;</div>
-            <div class="row">&nbsp;</div>
+            <div>
+			
+            
             <div class="row">&nbsp;</div>
             <hr/>
             <div class="row">&nbsp;</div>
-		
 		
             <div class="row">
             <h3 ><span class="br"><b>홈페이지</b> :</span> <strong class="homp">www.hongbap.com</strong></h3>

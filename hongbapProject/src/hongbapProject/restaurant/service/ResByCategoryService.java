@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import hongbapProject.restaurant.model.ResDAO;
 import hongbapProject.restaurant.model.ResDTO;
@@ -13,6 +14,8 @@ public class ResByCategoryService implements IResService {
 	@Override
 	public void excute(HttpServletRequest request, HttpServletResponse response) {
 		
+		HttpSession session = null;
+		session=request.getSession();
 		
 		String resCategory = request.getParameter("resCategory");
 		System.out.println("resCategory 값 : "+resCategory);
@@ -35,6 +38,9 @@ public class ResByCategoryService implements IResService {
 		request.setAttribute("ResList", ResList);
 		request.setAttribute("ResDTO", ResDTO);
 		request.setAttribute("resCategory", resCategory);
+		
+		session.setAttribute("resCategory", resCategory);
+		
 	}
 
 }

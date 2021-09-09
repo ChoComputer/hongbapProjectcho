@@ -48,7 +48,7 @@ h1 {top: 6px; left:0; font:italic small-caps bold 60px/1 sans-serif; line-height
 <div class="input-group-prepend">
 <span class="input-group-text">&nbsp;&nbsp;아이디&nbsp;</span>
 </div>
-<input type = "text" class="form-control" name="UserId" placeholder ="ID">
+<input type = "text" class="form-control" name="UserId" placeholder ="ID" required>
 </div>
 </div>
 
@@ -59,7 +59,7 @@ h1 {top: 6px; left:0; font:italic small-caps bold 60px/1 sans-serif; line-height
 <div class="input-group-prepend">
 <span class="input-group-text">비밀번호</span>
 </div>
-<input type = "password" class="form-control" name="UserPw" placeholder ="PW">
+<input type = "password" class="form-control" name="UserPw" placeholder ="PW" required>
 </div>
 </div>
 
